@@ -370,10 +370,13 @@
             // linkLbl_version
             // 
             this.linkLbl_version.AutoSize = true;
-            this.linkLbl_version.Location = new System.Drawing.Point(8, 188);
+            this.linkLbl_version.Location = new System.Drawing.Point(8, 182);
             this.linkLbl_version.Name = "linkLbl_version";
-            this.linkLbl_version.Size = new System.Drawing.Size(0, 12);
+            this.linkLbl_version.Size = new System.Drawing.Size(23, 12);
             this.linkLbl_version.TabIndex = 4;
+            this.linkLbl_version.TabStop = true;
+            this.linkLbl_version.Text = "";// "123";
+            this.linkLbl_version.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLbl_version_LinkClicked);
             // 
             // MainForm
             // 

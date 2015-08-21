@@ -330,13 +330,18 @@ namespace MouseHelper
             }
         }
 
+
+        private void linkLbl_version_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(updateUrl);
+        }
+        private string updateUrl;
         private void CheckUpdate(object state)
         {
-            string updateUrl;
             bool hasNewVerison = new VersionUpdate().HasNewVersion(state as Version, out updateUrl);
             if(hasNewVerison)
             {
-                linkLbl_version.Text = updateUrl;
+                linkLbl_version.Text = "有新版本，请前往下载页面";
             }
         }
     }
