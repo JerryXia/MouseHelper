@@ -58,6 +58,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_stop = new System.Windows.Forms.Button();
             this.lbl_version = new System.Windows.Forms.Label();
+            this.linkLbl_version = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -70,9 +71,9 @@
             // 
             // btn_start
             // 
-            this.btn_start.Location = new System.Drawing.Point(233, 178);
+            this.btn_start.Location = new System.Drawing.Point(297, 178);
             this.btn_start.Name = "btn_start";
-            this.btn_start.Size = new System.Drawing.Size(75, 23);
+            this.btn_start.Size = new System.Drawing.Size(43, 23);
             this.btn_start.TabIndex = 0;
             this.btn_start.Text = "启动";
             this.btn_start.UseVisualStyleBackColor = true;
@@ -349,9 +350,9 @@
             // 
             // btn_stop
             // 
-            this.btn_stop.Location = new System.Drawing.Point(314, 178);
+            this.btn_stop.Location = new System.Drawing.Point(346, 178);
             this.btn_stop.Name = "btn_stop";
-            this.btn_stop.Size = new System.Drawing.Size(75, 23);
+            this.btn_stop.Size = new System.Drawing.Size(43, 23);
             this.btn_stop.TabIndex = 2;
             this.btn_stop.Text = "停止";
             this.btn_stop.UseVisualStyleBackColor = true;
@@ -366,11 +367,20 @@
             this.lbl_version.TabIndex = 3;
             this.lbl_version.Text = "v1";
             // 
+            // linkLbl_version
+            // 
+            this.linkLbl_version.AutoSize = true;
+            this.linkLbl_version.Location = new System.Drawing.Point(8, 188);
+            this.linkLbl_version.Name = "linkLbl_version";
+            this.linkLbl_version.Size = new System.Drawing.Size(0, 12);
+            this.linkLbl_version.TabIndex = 4;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 209);
+            this.Controls.Add(this.linkLbl_version);
             this.Controls.Add(this.lbl_version);
             this.Controls.Add(this.btn_stop);
             this.Controls.Add(this.groupBox1);
@@ -428,6 +438,7 @@
         private System.Windows.Forms.Label lbl_version;
         private System.Windows.Forms.CheckBox chk_locky;
         private System.Windows.Forms.CheckBox chk_lockx;
+        private System.Windows.Forms.LinkLabel linkLbl_version;
     }
 }
 

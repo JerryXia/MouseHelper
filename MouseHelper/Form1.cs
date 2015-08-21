@@ -36,6 +36,8 @@ namespace MouseHelper
 
             BindFastKeys("start", txt_start.Text.Trim());
             BindFastKeys("stop", txt_stop.Text.Trim());
+
+            ThreadPool.QueueUserWorkItem(CheckUpdate, CurrentVersion);
         }
 
         private void Main_Closing(object sender, CancelEventArgs e)
@@ -328,5 +330,14 @@ namespace MouseHelper
             }
         }
 
+        private void CheckUpdate(object state)
+        {
+            string updateUrl;
+            bool hasNewVerison = new VersionUpdate().HasNewVersion(state as Version, out updateUrl);
+            if(hasNewVerison)
+            {
+                linkLbl_version.Text = updateUrl;
+            }
+        }
     }
 }
